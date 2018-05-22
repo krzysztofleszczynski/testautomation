@@ -3,21 +3,21 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.jsystem</groupId>
-    <artifactId>qatestautomation</artifactId>
-    <version>1.0-SNAPSHOT</version>
 
-    <parent>
+
     <groupId>com.jsystem</groupId>
     <artifactId>testautomation</artifactId>
     <version>1.0-SNAPSHOT</version>
-    </parent>
+    <packaging>pom</packaging>
+    <modules>
+        <module>qatestautomation</module>
+    </modules>
 
     <properties>
-    <jdk.version>1.8</jdk.version>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outEncoding>UTF-8</project.reporting.outEncoding>
-</properties>
+        <jdk.version>1.8</jdk.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outEncoding>UTF-8</project.reporting.outEncoding>
+    </properties>
 
 
     <build>
@@ -63,17 +63,21 @@
                         <include>**/*Test.java</include>
                     </includes>
                     <!--P    <exclude>*/*Test.java</exclude>  -->
-                                    </configuration>
-                                </plugin>
-                            </plugins>
-                        </build>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
-                    <dependencies>
-                        <!-- https://mvnrepository.com/artifact/junit/junit -->
-    <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-    </dependency>
+    <dependencyManagement>
+        <dependencies>
+            <!-- https://mvnrepository.com/artifact/junit/junit -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.12</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
-</dependencies>
 </project>
