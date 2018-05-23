@@ -19,14 +19,29 @@
     <project.reporting.outEncoding>UTF-8</project.reporting.outEncoding>
 </properties>
 
-<profiles>
-    <profile>
-        <id>allTest</id>
-        <properties>
-            <tests>all</tests>
-        </properties>
-    </profile>
-</profiles>
+    <profiles>
+        <!-- profile do uruchamiania testów według tagu-->
+        <!-- wywołanie mvn clean install -PallTests -->
+
+        <profile>
+            <id>allTests</id>
+            <properties>
+                <tests>all</tests>
+            </properties>
+        </profile>
+        <profile>
+            <id>regresion</id>
+            <properties>
+                <tests>Repeated</tests>
+            </properties>
+        </profile>
+        <profile>
+            <id>param</id>
+            <properties>
+                <tests>param</tests>
+            </properties>
+        </profile>
+    </profiles>
 
 
     <build>
@@ -44,7 +59,8 @@
             </plugin>
 
             <!--Plugin do mavena aby w uruchamiał wszystkie testy które mają w nazwie klasy końcówkę Test oraz RunTests
-            dzięki czemu uruchamiane będą również testy zarządzane przez cucumbera-->
+            dzięki czemu uruchamiane będą również testy zarządzane przez cucumbera
+            maven-surefire-plugin odpowiada za uruchamianie testów -->
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -71,12 +87,14 @@
                     <includes>
                         <include>**/*Test.java</include>
                     </includes>
+                    <!-- uruchamiania testów z podaniem tagu poprzez parametr w wywołaniu-->
+                    <!-- wywołanie mvn clean install -Dtests=all -->
                         <properties>
-                            <includeTags>$(tests)</includeTags>
+                            <includeTags>${tests}</includeTags>
                         </properties>
 
                     <!--P    <exclude>*/*Test.java</exclude>  -->
-                                    </configuration>
+                </configuration>
                                 </plugin>
                             </plugins>
                         </build>
