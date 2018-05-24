@@ -1,4 +1,4 @@
-package com.jsystem.testautomation;
+package com.jsystem.testautomation.frontendFactory;
 
 public class TestDataHelper {
 

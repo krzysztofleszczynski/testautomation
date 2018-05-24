@@ -1,7 +1,6 @@
-package com.jsystem.testautomation;
+package com.jsystem.testautomation.frontendFactory;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -22,7 +21,7 @@ public class FrontendConfig {
 }
 
     @BeforeEach
-    public void setUp(){
+    public WebDriver setUp(){
 //pobranie drivera
     WebDriverManager.chromedriver().setup();
     ChromeOptions chromeOptions = new ChromeOptions();
@@ -36,7 +35,8 @@ public class FrontendConfig {
     driver.manage().window().maximize();
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-}
+        return null;
+    }
     @AfterEach
     public void tearDown(){
 //    zamyka driver oraz przeglądarkę, ustawia się jako null żeby wyczyścić go.

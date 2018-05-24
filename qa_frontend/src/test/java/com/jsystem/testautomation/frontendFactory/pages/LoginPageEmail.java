@@ -1,4 +1,4 @@
-package com.jsystem.testautomation.pages;
+package com.jsystem.testautomation.frontendFactory.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
