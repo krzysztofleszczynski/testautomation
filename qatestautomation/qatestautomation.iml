@@ -21,7 +21,7 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.slf4j:slf4j-api:1.7.5" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.jcabi:jcabi-aspects:0.22" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.aspectj:aspectjrt:1.8.4" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: javax.validation:validation-api:1.1.0.Final" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: javax.validation:validation-api:2.0.0.Final" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.glassfish.jaxb:jaxb-runtime:2.2.11" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.glassfish.jaxb:jaxb-core:2.2.11" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: javax.xml.bind:jaxb-api:2.2.12-b140109.1041" level="project" />

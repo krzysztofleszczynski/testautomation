@@ -7,11 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="qa_frontend" />
+        <module name="qaapi" />
         <module name="qatestautomation" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="qa_frontend" target="1.8" />
+      <module name="qaapi" target="1.8" />
       <module name="qatestautomation" target="1.8" />
       <module name="testautomation" target="1.8" />
     </bytecodeTargetLevel>
