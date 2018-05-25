@@ -14,6 +14,6 @@ public class Specificator {
 
     public static RequestSpecification requestSpecificationFake = new RequestSpecBuilder()
             .setContentType(ContentType.JSON)
-            .setBaseUri("http://fakerestapi.azzurewebsites,net")
+            .setBaseUri("https://fakerestapi.azurewebsites.net")
             .build();
 }

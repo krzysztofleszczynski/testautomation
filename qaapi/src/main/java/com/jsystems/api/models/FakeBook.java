@@ -1,9 +1,13 @@
 package com.jsystems.api.models;
 
-public class FakeBook {
+import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.io.Serializable;
 
-    public int id;
+public class FakeBook implements Serializable {
 
+@JsonProperty("ID")
+    public Long id;
 
-}
+    }
+

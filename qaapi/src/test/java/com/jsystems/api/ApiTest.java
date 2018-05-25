@@ -306,18 +306,20 @@ public class ApiTest {
     @DisplayName("GET: /api/books/ - Test of Books")
     public void fakeRestApiBook()  {
 
-        Response response = TestResponse.responseFakeRestApiBook("/api/books/{id}",1);
+        Response response = TestResponse.responseFakeRestApiBook("/api/Books/{id}",1);
 //        Response response = RestAssured
 //                .given()
 //                .spec(Specificator.requestSpecification)
 //                .when()
 //                .get("/api.books/{id}")
 //                .andReturn();
-    FakeBook book = response
+    FakeBook books = response
             .then()
             .extract()
             .body()
             .as(FakeBook.class);
+        System.out.println(books);
+        assertTrue(books.id == 1);
 
     }
 
